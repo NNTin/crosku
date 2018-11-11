@@ -1,0 +1,10 @@
+{
+  "name": "Crosku",
+  "description": "Crossbar + Heroku = Crosku",
+  "keywords": [
+    "crossbar",
+    "heroku",
+    "router"
+  ],
+  "repository": "https://github.com/NNTin/crosku"
+}
