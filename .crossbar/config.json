@@ -39,8 +39,7 @@
                     "endpoint": {
                         "interface": "0.0.0.0",
                         "type": "tcp",
-                        "port": "$PORT",
-                        "tls": {}
+                        "port": "$PORT"
                     },
                     "paths": {
                         "info": {
