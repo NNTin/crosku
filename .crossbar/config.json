@@ -38,7 +38,8 @@
                     "type": "universal",
                     "endpoint": {
                         "type": "tcp",
-                        "port": "$PORT"
+                        "port": "$PORT",
+                        "tls": { }
                     },
                     "rawsocket": {
                     },
