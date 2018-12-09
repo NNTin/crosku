@@ -11,6 +11,25 @@
                     "name": "realm1",
                     "roles": [
                         {
+                            "name": "backend",
+                            "permissions": [
+                                {
+                                    "uri": "*",
+                                    "allow": {
+                                        "call": true,
+                                        "register": true,
+                                        "publish": true,
+                                        "subscribe": true
+                                    },
+                                    "disclose": {
+                                        "caller": true,
+                                        "publisher": true
+                                    },
+                                    "cache": true
+                                }
+                            ]
+                        },
+                        {
                             "name": "anonymous",
                             "permissions": [
                                 {
