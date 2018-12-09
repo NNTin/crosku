@@ -35,30 +35,33 @@
             ],
             "transports": [
                 {
-                    "type": "universal",
+                    "type": "web",
                     "endpoint": {
+                        "interface": "0.0.0.0",
                         "type": "tcp",
                         "port": "$PORT",
-                        "tls": { }
+                        "tls": {}
                     },
-                    "rawsocket": {
-                    },
-                    "websocket": {
+                    "paths": {
+                        "info": {
+                            "type": "nodeinfo"
+                        },
                         "ws": {
-                            "type": "websocket"
-                        }
-                    },
-                    "web": {
-                        "paths": {
-                            "/": {
-                                "type": "static",
-                                "directory": "../web",
-                                "options": {
-                                    "enable_directory_listing": true
+                            "type": "websocket",
+                            "auth": {
+                                "wampcra": {
+                                    "type": "static",
+                                    "users": {
+                                        "backend": {
+                                            "secret": "12345",
+                                            "role": "backend"
+                                        }
+                                    }
+                                },
+                                "anonymous": {
+                                    "type": "static",
+                                    "role": "frontend"
                                 }
-                            },
-                            "info": {
-                                "type": "nodeinfo"
                             }
                         }
                     }
