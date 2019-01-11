@@ -103,6 +103,11 @@
                                     "type": "static",
                                     "role": "frontend"
                                 }
+                            },
+                            "options": {
+                                "auto_ping_interval": 2000,
+                                "auto_ping_timeout": 5000,
+                                "auto_ping_size": 4
                             }
                         }
                     }
